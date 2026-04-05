@@ -16,6 +16,9 @@ TRAIN_RATIO = 0.70
 VAL_RATIO   = 0.15
 # TEST_RATIO  = sisa (0.15) — dihitung otomatis dari TRAIN + VAL
 
+#untuk validasi jumlah data mentah minimal yang diperlukan untuk prediksi
+MIN_RAW_ROWS = 60 #minimal baris mentah (sebelum feature engineering)
+
 # --- Konfigurasi halaman Streamlit ---
 PAGE_CONFIG = {
     "page_title": "Prediksi Harga Emas — GRU",

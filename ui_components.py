@@ -28,7 +28,7 @@ def render_sidebar() -> st.runtime.uploaded_file_manager.UploadedFile | None:
         st.divider()
 
         uploaded_file = st.file_uploader(
-            "Upload CSV data XAUUSD dengan minimal waktu 3 bulan (> 45 baris).",
+            "Upload CSV data XAUUSD dengan minimal waktu 4 bulan (> 60 baris).",
             type=["csv"],
             help="Kolom wajib: Date, Price, Open, High, Low",
         )

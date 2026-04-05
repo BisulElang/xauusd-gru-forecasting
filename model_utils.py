@@ -142,12 +142,11 @@ def run_prediction(model, scaler, df_model_full: pd.DataFrame) -> dict:
     n = len(df_model_full)
 
     # ── Validasi minimum data ────────────────────────────────
-    MIN_ROWS = WINDOW_SIZE + 1
+    MIN_ROWS = WINDOW_SIZE + 15
     if n < MIN_ROWS:
         st.error(
-            f"Data terlalu sedikit: "
-            f"Dibutuhkan minimal 44 baris + 1 header"
-            f"(masukan data dengan minimal rentang waktu harian selama 3 bulan) agar model dapat membentuk sekuens prediksi."
+            f"Data terlalu sedikit: dibutuhkan minimal 60 baris data csv "
+            f"(masukan data dengan minimal rentang waktu harian selama ±4 bulan) data anda hanya {n + 13} baris + header."
         )
         st.stop()
 
